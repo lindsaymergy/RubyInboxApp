@@ -7,4 +7,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "root#index"
   post "/", to: "root#create"
+
+  # # Defines the route for sending an email
+  get 'email/send_email'
+
 end

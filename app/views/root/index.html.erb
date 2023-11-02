@@ -1,6 +1,17 @@
 <%= form_tag root_path, class: "send-email" do %>
-  <%= submit_tag "Click to Send Email", style: "margin: 10px; padding: 10px" %>
-<% end %>
+  <div class="container">
+    <%= link_to 'Click to Send Email', '/email/send_email', method: :get, style: "margin: 10px; padding: 10px"%>
+    <%= submit_tag "View Inbox", style: "margin: 10px; padding: 10px" %>
+  </div>
+  <div class="container">
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>">
+        <%= value %>
+      </div>
+    <% end %>
+    <%= yield %>
+  </div>
+  <% end %>
 
 <script>
 document.querySelector(".send-email").onsubmit = function(e) {
