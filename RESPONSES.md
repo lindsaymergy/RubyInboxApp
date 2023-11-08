@@ -36,4 +36,4 @@ If that doesn’t automatically fix the deployment, sharing the logs that you re
 
 #### Rails App URL
 
-Once you've deployed your Rails app, put the link here: `<app>.fly.dev`
+[Deployed Rails App](https://green-cloud-2374.fly.dev/)
